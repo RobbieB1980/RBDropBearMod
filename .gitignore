@@ -1,0 +1,48 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+
+# Editors / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local machine notes (not shared)
+docs/MACHINE.md
+
+# Minecraft / pack artifacts (build on demand)
+*.mcaddon
+*.mcpack
+*.mcworld
+*.mctemplate
+
+# Optional: keep intentional release zips
+!releases/**/*.mcaddon
+
+# MCreator / Gradle
+.gradle/
+build/
+out/
+run/
+runs/
+tmp/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Blockbench autosaves
+*.bbmodel.bak
+*.backup
+
+# Secrets
+.env
+*.pem
+credentials*
