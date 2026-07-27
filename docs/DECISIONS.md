@@ -4,6 +4,22 @@ Append-only. Newest at top.
 
 ---
 
+## 2026-07-27 — Phase 1 research lock-ins
+
+| Decision | Choice | Rationale |
+|----------|--------|-----------|
+| MCreator version | **2026.2** + generator **addon-26.1x** | Present on home PC; matches engine 26; older 1.21.x generator is insufficient |
+| Engine / script versions | `min_engine_version` **[1, 26, 10]**; `@minecraft/server` **2.2.0** | Match MCreator 26.1x templates (Digger used 2.0.0 / [1,26,0] — adopt MCreator’s higher bar) |
+| Workspace layout | MCreator project **inside git repo**; packs at `src/main/drop_bears_behaviourpack` + `_resourcepack` | Matches generator.yaml; versioned source of truth |
+| Biome implementation | Hand JSON **partial biome replacement** / custom biome (Phase 9); not MCreator | Generator has no biome element |
+| Trees | Hand feature/structure JSON | Generator only has simple ore-style features |
+| Poison II | Hand entity attack effect **or** script `addEffect` | MCreator living entity template is damage-only |
+| Fever / ambush / depth / torch / disengage | **Script** | Requires world/player queries and custom timers |
+| Depth metric | Distance-to-edge via `getBiome` sampling; fallback eucalypt block density | Stable Script API `Dimension.getBiome` |
+| Canopy ambush | Upward `getBlock` for eucalypt leaves + biome check | Simple, no structure query API needed |
+
+---
+
 ## 2026-07-27 — Project kickoff defaults
 
 | Decision | Choice | Rationale |

@@ -2,38 +2,39 @@
 
 **Status:** Initial — refine after Phase 2 skeleton exists.
 
-## Pack layout (target)
+## Pack layout (target — MCreator 26.1x)
 
 ```text
-drop-bears/
-├── docs/                          # Knowledge base (this tree)
+drop-bears/                        # git repo root = MCreator workspace (preferred)
+├── docs/
 ├── README.md
 ├── AGENTS.md
-├── drop_bears_BP/                 # Behavior pack (name may match MCreator export)
-│   ├── manifest.json
-│   ├── pack_icon.png
-│   ├── entities/
-│   ├── items/
-│   ├── blocks/
-│   ├── biomes/                    # if used
-│   ├── features/ / feature_rules/
-│   ├── loot_tables/
-│   ├── recipes/
-│   ├── spawn_rules/
-│   ├── texts/
-│   └── scripts/
-│       └── main.js                # ambush, fever, depth, torch, AI assists
-└── drop_bears_RP/                 # Resource pack
-    ├── manifest.json
-    ├── pack_icon.png
-    ├── entity/
-    ├── models/
-    ├── textures/
-    ├── texts/
-    └── sounds/                    # optional later
+├── *.mcreator                     # workspace file (Phase 2)
+├── src/main/
+│   ├── drop_bears_behaviourpack/  # BP (generator name)
+│   │   ├── manifest.json          # min_engine [1,26,10]; script module
+│   │   ├── entities/
+│   │   ├── items/
+│   │   ├── blocks/
+│   │   ├── biomes/                # hand JSON (Phase 9)
+│   │   ├── features/ / feature_rules/
+│   │   ├── loot_tables/
+│   │   ├── recipes/
+│   │   ├── spawn_rules/
+│   │   └── scripts/
+│   │       ├── drop_bears_scripts.js   # entry (MCreator)
+│   │       └── …                       # ambush, fever, torch, etc.
+│   └── drop_bears_resourcepack/   # RP
+│       ├── manifest.json
+│       ├── entity/
+│       ├── models/
+│       ├── textures/
+│       ├── texts/
+│       └── sounds/
+└── build/export/export.mcaddon    # gitignored
 ```
 
-**MCreator:** Workspace may live under `mcreator/` or as `*.mcreator` + `src/` — decide in Phase 2 and record in `DECISIONS.md`. Prefer exporting or syncing into `drop_bears_BP` / `drop_bears_RP` so Minecraft testing and git stay simple.
+**MCreator:** Use **2026.2** generator **addon-26.1x**, `modid` `drop_bears`. See `04-mcreator-map.md`.
 
 ## Identifiers
 
@@ -54,14 +55,15 @@ drop-bears/
 
 ## Scripting
 
-- Module: `@minecraft/server` **2.0.0** (stable; match Digger when possible).
-- Entry: `scripts/main.js` (split into modules later if file grows).
-- Player state for fever: dynamic properties (e.g. `drop_bears:fever_until` / tick counters).
+- Module: `@minecraft/server` **2.2.0** (MCreator 26.1x default; prefer stable APIs).
+- Entry: `scripts/drop_bears_scripts.js` (split modules later if needed).
+- Player state for fever: dynamic properties (e.g. `drop_bears:fever_active`, next damage tick).
+- Biome/depth: `dimension.getBiome(location)`; canopy: `dimension.getBlock` upward scan.
 
 ## Versioning
 
 - Pack `version` and git tags: `v0.1.0` first playable (placeholders), `v1.0.0` art-complete.
-- `min_engine_version`: prefer `[1, 26, 0]`.
+- `min_engine_version`: **`[1, 26, 10]`** (MCreator template).
 
 ## Dependencies
 

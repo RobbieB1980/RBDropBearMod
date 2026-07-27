@@ -8,7 +8,7 @@ Survival add-on: **Eucalypt Forests**, **Drop Bears** that ambush from trees, **
 | **Target** | 1.26.x (engine 26) |
 | **Repo** | https://github.com/RobbieB1980/RBDropBearMod |
 | **Local path (home)** | `D:\Grok Build\drop-bears\` |
-| **Status** | Phase 0 — knowledge base (no playable content yet) |
+| **Status** | Phase 1 complete — research done; no playable packs yet |
 
 ## Features (planned)
 

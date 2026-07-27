@@ -4,6 +4,17 @@ Short append-only notes. Newest at top.
 
 ---
 
+## 2026-07-27 — Phase 1 research
+
+- Confirmed **MCreator 2026.2 / addon-26.1x** on home PC; manifests `[1,26,10]` + `@minecraft/server` 2.2.0.
+- Generator supports entities, blocks, items, recipes, loot, scripts — **not** biomes/trees.
+- Fever, ambush, depth packs, torch repel, disengage → **scripts**; biome/trees → **hand JSON**.
+- Poison: hand-edit attack effect or `addEffect`.
+- Updated research, MCreator map, architecture, decisions, progress.
+- **Next:** Phase 2 MCreator skeleton (or hand-scaffold packs if UI blocked).
+
+---
+
 ## 2026-07-27 — Phase 0 kickoff
 
 - Approved multi-session plan; GitHub repo `RobbieB1980/RBDropBearMod`.

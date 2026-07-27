@@ -1,15 +1,15 @@
 # Progress
 
 **Last updated:** 2026-07-27  
-**Current phase:** Phase 0 complete  
-**Next phase:** Phase 1 — Research notes  
+**Current phase:** Phase 1 complete  
+**Next phase:** Phase 2 — MCreator workspace + pack skeleton  
 
 ## Status summary
 
 | Phase | Name | Status |
 |------:|------|--------|
-| 0 | Repo + knowledge base | **Done** (pushed to GitHub) |
-| 1 | Research notes | Not started |
+| 0 | Repo + knowledge base | **Done** |
+| 1 | Research notes | **Done** |
 | 2 | MCreator + pack skeleton | Not started |
 | 3 | Blocks & items | Not started |
 | 4 | Entity shell | Not started |
@@ -21,26 +21,26 @@
 | 10 | Art pass | Not started |
 | 11 | Package & polish | Not started |
 
-## Done this session (Phase 0)
+## Done this session (Phase 1)
 
-- Created project tree under `D:\Grok Build\drop-bears\`
-- Canonical requirements from Word outline → `docs/00-requirements.md`
-- Architecture, systems, MCreator map stubs, test plan
-- `README.md`, `AGENTS.md`, `.gitignore`, `DECISIONS.md`, `SESSION-LOG.md`, `BACKLOG.md`
-- Linked remote target: https://github.com/RobbieB1980/RBDropBearMod
+- Inspected **MCreator EAP 2026.2** `generator-addon-26.1x` (templates, AI tasks, manifests, script module).
+- Confirmed Creator biome options: override vs **partial replace**; biome = hand JSON.
+- Locked implementation split: MCreator shell vs scripts for fever/ambush/torch/depth/disengage.
+- Documented canopy + depth algorithms (`getBlock` / `getBiome`).
+- Updated `01-research.md`, `04-mcreator-map.md`, `02-architecture.md`, `DECISIONS.md`.
 
 ## Next actions
 
-1. Ensure Git is installed; `git init`/`clone`, commit, `git push -u origin main`
-2. Phase 1: fill `docs/01-research.md` (Creator docs + MCreator 1.26 compatibility)
-3. Phase 2: create MCreator workspace + empty importable packs
+1. **Phase 2:** Create MCreator 2026.2 workspace in this repo (`modid` `drop_bears`, generator 26.1x).
+2. Generate empty BP/RP manifests + optional empty script entry; commit `src/main/drop_bears_*pack`.
+3. Verify packs import into Minecraft 1.26.x without errors.
+4. Then Phase 3: placeholder blocks/items.
 
 ## Blockers
 
-- None for Phase 0.
-- **gh** CLI not installed (optional; HTTPS git works).
-- On new shells, use `"C:\Program Files\Git\cmd\git.exe"` or reopen terminal so `git` is on PATH.
+- Phase 2 needs **interactive MCreator** on the author’s PC (we can also hand-scaffold BP/RP mirroring the generator if MCreator UI is unavailable in-session).
+- Confirm Minecraft client on the machine is **≥ 1.26.10** before relying on generated `min_engine_version`.
 
 ## Playable?
 
-**No** — documentation only.
+**No** — research/docs only.
