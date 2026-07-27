@@ -1,14 +1,14 @@
 # Progress
 
 **Last updated:** 2026-07-27  
-**Current phase:** Phase 0 complete (pending git push if Git install finished)  
+**Current phase:** Phase 0 complete  
 **Next phase:** Phase 1 — Research notes  
 
 ## Status summary
 
 | Phase | Name | Status |
 |------:|------|--------|
-| 0 | Repo + knowledge base | **Done** (files on disk; push when git ready) |
+| 0 | Repo + knowledge base | **Done** (pushed to GitHub) |
 | 1 | Research notes | Not started |
 | 2 | MCreator + pack skeleton | Not started |
 | 3 | Blocks & items | Not started |
@@ -37,8 +37,9 @@
 
 ## Blockers
 
-- **Git** was not on PATH at Phase 0 start; winget install may be required before first push.
-- **gh** CLI not installed (optional; HTTPS git remotes fine).
+- None for Phase 0.
+- **gh** CLI not installed (optional; HTTPS git works).
+- On new shells, use `"C:\Program Files\Git\cmd\git.exe"` or reopen terminal so `git` is on PATH.
 
 ## Playable?
 
