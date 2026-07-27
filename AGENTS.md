@@ -24,10 +24,11 @@ Instructions for AI assistants and humans continuing this project across session
 |-----|--------|
 | GitHub | https://github.com/RobbieB1980/RBDropBearMod |
 | Preferred local path | `D:\Grok Build\drop-bears\` (may differ on work PC) |
-| Target | Bedrock **1.26.x**, `@minecraft/server` **2.0.0** for scripts |
+| Target | Bedrock **1.26.x**, `@minecraft/server` **2.2.0**, `min_engine` **[1,26,10]** |
 | Namespace (default) | `drop_bears` |
-| Tooling | **MCreator first**, then hand-tune scripts/JSON |
+| Tooling | **MCreator first** (home PC), then hand-tune scripts/JSON |
 | Art v1 | **Placeholders** |
+| Phase 2 | **Home PC only** — MCreator blocked at work (`docs/06-phase2-home-checklist.md`) |
 
 ## Reference packs on the author’s home machine
 
@@ -72,9 +73,16 @@ Full plan may also live in a Grok session `plan.md`; **this repo’s `docs/` is 
 - Sprint + ≤50% HP disengage
 - Eucalyptus torch radius-10 repel
 
+## Machine rules
+
+- **Home:** MCreator, Minecraft import/test, Phase 2 export, pack generation.
+- **Work:** No MCreator. Do not invent a parallel hand-scaffold that fights MCreator unless the user asks. After Phase 2 is on GitHub, hand script/JSON edits on work are OK.
+- Switching machines: always `git pull` first, `git push` before you leave.
+
 ## Do not
 
 - Rewrite the whole mod in one session.
 - Change namespace casually after packs exist.
 - Paste the entire Word outline into every chat — point at `docs/00-requirements.md`.
 - Force-push `main` unless the user explicitly asks.
+- Mark Phase 2 complete without MCreator export from **home**.

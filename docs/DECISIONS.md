@@ -4,6 +4,16 @@ Append-only. Newest at top.
 
 ---
 
+## 2026-07-27 — Phase 2 home-only
+
+| Decision | Choice | Rationale |
+|----------|--------|-----------|
+| Where Phase 2 runs | **Home PC only** | MCreator is blocked on work PC |
+| Work PC role until Phase 2 ships | Docs / git only for pack creation; no fake skeleton required | Avoid diverging from MCreator-generated layout |
+| Home checklist | `docs/06-phase2-home-checklist.md` | Single place for resume after machine switch |
+
+---
+
 ## 2026-07-27 — Phase 1 research lock-ins
 
 | Decision | Choice | Rationale |
