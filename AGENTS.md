@@ -2,6 +2,13 @@
 
 Instructions for AI assistants and humans continuing this project across sessions.
 
+**Human resume prompts (examples):**  
+“Continue the Drop Bears project (RBDropBearMod). Read docs/PROGRESS.md…”  
+“Resume RBDropBearMod from docs/PROGRESS.md”  
+“I'm on HOME/WORK PC — continue Drop Bears.”  
+
+Full guide: `docs/HOW-TO-RESUME.md`.
+
 ## Always do first
 
 1. `git pull` (if git is available).

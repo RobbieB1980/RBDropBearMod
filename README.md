@@ -33,6 +33,25 @@ Full requirements: [`docs/00-requirements.md`](docs/00-requirements.md).
 
 This repo is the **source of truth**. Do not rely on Google Drive for the code tree.
 
+**Full resume guide:** [`docs/HOW-TO-RESUME.md`](docs/HOW-TO-RESUME.md)
+
+### Grok Build — how to pick up this project
+
+1. Open **this folder** as the Grok workspace (not just `D:\`).
+2. `git pull`
+3. Say something like:
+
+```text
+Continue the Drop Bears project (RBDropBearMod).
+Read docs/PROGRESS.md, AGENTS.md, and only the docs for the current phase. Do the next phase only.
+```
+
+Or shorter: `Continue Drop Bears from docs/PROGRESS.md` / `Resume RBDropBearMod`.
+
+Add `I'm on WORK PC (no MCreator)` or `I'm on HOME PC` when relevant.
+
+### Git each session
+
 ```text
 git pull
 # work one phase
@@ -41,12 +60,13 @@ git commit -m "Phase N: …"
 git push
 ```
 
-On the other PC: `git pull` before continuing. Prefer one machine actively editing a branch at a time.
+Prefer one machine actively editing `main` at a time.
 
 ## Docs map (token-limit strategy)
 
 | File | Purpose |
 |------|---------|
+| [`docs/HOW-TO-RESUME.md`](docs/HOW-TO-RESUME.md) | Work/home + Grok pickup phrases |
 | [`docs/00-requirements.md`](docs/00-requirements.md) | Canonical feature spec |
 | [`docs/PROGRESS.md`](docs/PROGRESS.md) | Current phase, next steps |
 | [`docs/DECISIONS.md`](docs/DECISIONS.md) | Locked design choices |
